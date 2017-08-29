@@ -1,5 +1,6 @@
 Some Notes		
 NMAP -n flag is used for reverse DNS resolution and can give false results(filtered in your case)
+
 --max-retries can help substantially in increasing the scan speed but beware of the test results. Check this by reducing the port range(may be) and see if the speed increases. 
 
 
@@ -10,3 +11,4 @@ When the --min-rate option is given Nmap will do its best to send packets as fas
 
 Likewise, --max-rate limits a scan's sending rate to a given maximum. Use --max-rate 100, for example, to limit sending to 100 packets per second on a fast network. Use --max-rate 0.1 for a slow scan of one packet every ten seconds. Use --min-rate and --max-rate together to keep the rate inside a certain range.
 
+You can slow down or speed up scans by specifying the amount of time that Nmap will wait between probes. Scans are often slowed down in order to avoid detection. You need to specify the number of seconds Nmap will wait between each probe it sends to a given host. The flag used is --scan-delay
