@@ -3,9 +3,7 @@ NMAP -n flag is used for reverse DNS resolution and can give false results(filte
 
 --max-retries can help substantially in increasing the scan speed but beware of the test results. Check this by reducing the port range(may be) and see if the speed increases. 
 
-
---min-rate <number>; --max-rate <number> (Directly control the scanning rate)
-Nmap's dynamic timing does a good job of finding an appropriate speed at which to scan. Sometimes, however, you may happen to know an appropriate scanning rate for a network, or you may have to guarantee that a scan will be finished by a certain time. Or perhaps you must keep Nmap from scanning too quickly. The --min-rate and --max-rate options are designed for these situations.
+--min-rate <number>; --max-rate <number> (Directly control the scanning rate)Nmap's dynamic timing does a good job of finding an appropriate speed at which to scan. Sometimes, however, you may happen to know an appropriate scanning rate for a network, or you may have to guarantee that a scan will be finished by a certain time. Or perhaps you must keep Nmap from scanning too quickly. The --min-rate and --max-rate options are designed for these situations.
 
 When the --min-rate option is given Nmap will do its best to send packets as fast as or faster than the given rate. The argument is a positive real number representing a packet rate in packets per second. For example, specifying --min-rate 300 means that Nmap will try to keep the sending rate at or above 300 packets per second. Specifying a minimum rate does not keep Nmap from going faster if conditions warrant.
 
